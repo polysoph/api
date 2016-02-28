@@ -1,0 +1,11 @@
+#!/usr/bin/env node --harmony_destructuring 
+
+require('envc')()
+
+const http = require('http')
+const summary = require('server-summary')
+const config = require('../lib/config')
+const app = require('..')()
+
+const server = http.createServer(app.callback())
+server.listen(config.port, summary(server, process.stdout))

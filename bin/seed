@@ -1,0 +1,35 @@
+#!/usr/bin/env node --harmony_destructuring
+
+const fs = require('fs')
+const path = require('path')
+const glob = require('glob').sync
+const set = require('nested-prop').set
+const yaml = require('js-yaml')
+
+const config = require('../lib/config')
+
+const db = {}
+
+const base = './db/'
+const matches = glob(base + '**/*.yml')
+
+/**
+ * Set each file to a json key
+ */
+matches.forEach(match => {
+	const noBase = match.replace(base, '')
+	const file = path.parse(noBase)
+
+	const contents = fs.readFileSync(match, 'utf8')
+	const data = yaml.safeLoad(contents)
+
+	const segments = file.dir.split('/').concat([file.name])
+	const key = segments.filter(n => n).join('.')
+
+	set(db, key, data)
+})
+
+/**
+ * Write out `db.json`
+ */
+fs.writeFileSync(config.paths.root + '/db.json', JSON.stringify(db))

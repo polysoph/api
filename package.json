@@ -1,0 +1,26 @@
+{
+  "name": "polysoph-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ross Zurowski <ross@rosszurowski.com> (http://rosszurowski.com)",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "envc": "^2.4.1",
+    "glob": "^7.0.0",
+    "graphql": "^0.4.18",
+    "js-yaml": "^3.5.3",
+    "koa": "^1.1.2",
+    "koa-compress": "^1.0.9",
+    "koa-graphql": "^0.4.4",
+    "koa-mount": "^1.3.0",
+    "lowdb": "^0.12.5",
+    "nested-prop": "^1.0.1",
+    "server-summary": "^5.0.1"
+  }
+}

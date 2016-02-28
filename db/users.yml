@@ -1,0 +1,77 @@
+---
+- id: 0
+  handle: gowers
+  name: Tim Gowers
+  title: Professor
+  institution: University of Cambridge
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/gowers.jpg
+- id: 1
+  handle: ttao
+  name: Terrence Tao
+  institution: University of California, Los Angeles
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/terrencetao.jpg
+- id: 2
+  handle: jozsef
+  name: Jozsef Solymosi
+  institution: University of British Columbia
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/jozsef.jpg
+- id: 3
+  handle: gil
+  name: Gil Kalai
+  institution: Yale University
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/gil.jpg
+- id: 4
+  handle: timaustin
+  name: Tim Austin
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/timaustin.jpg
+- id: 5
+  handle: jasondyer
+  name: Jason Dyer
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/jasondyer.jpg
+- id: 6
+  handle: ryanodonnell
+  name: Ryan O'Donnell
+  institution: Carnegie Mellon
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/rodonnell.jpg
+- id: 7
+  handle: celsholtz
+  name: Christian Elsholtz
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/celsholtz.jpg
+- id: 8
+  handle: boris
+  name: Boris Bukh
+  institution: Carnegie Mellon
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/boris.jpg
+- id: 9
+  handle: wgasarch
+  name: William Gasarch
+  institution: University of Maryland
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/wgasarch.jpg
+- id: 10
+  handle: tneylon
+  name: Tyler Neylon
+  institution: New York University
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/tneylon.jpg
+- id: 11
+  handle: sune
+  name: Sune Kristian Jakobsen
+  institution: University of Oxford
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/sune.jpg
+- id: 12
+  handle: kevinobryant
+  name: Kevin O'Bryant
+  institution: CUNY
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/kobryant.jpg

@@ -17,7 +17,7 @@ DATA = $(shell find ./db -type f -name '*.yml')
 # Tasks
 #
 
-start: db
+start: install db
 	@bin/www | garnish
 
 watch:
@@ -30,8 +30,17 @@ clean:
 	@rm db.json
 
 #
+# Shorthands
+#
+
+install: node_modules
+
+#
 # Targets
 #
+
+node_modules: package.json
+	@npm install
 
 db.json: $(DATA)
 	@bin/seed

@@ -1,14 +1,8 @@
 {
   "name": "polysoph-api",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Ross Zurowski <ross@rosszurowski.com> (http://rosszurowski.com)",
-  "license": "MIT",
+  "private": true,
   "dependencies": {
     "app-root-path": "^1.0.0",
     "envc": "^2.4.1",
@@ -22,5 +16,11 @@
     "lowdb": "^0.12.5",
     "nested-prop": "^1.0.1",
     "server-summary": "^5.0.1"
-  }
+  },
+  "author": {
+    "name": "Ross Zurowski",
+    "email": "ross@rosszurowski.com",
+    "url": "http://rosszurowski.com"
+  },
+  "license": "MIT"
 }

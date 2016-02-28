@@ -20,6 +20,9 @@ DATA = $(shell find ./db -type f -name '*.yml')
 start: install db
 	@bin/www | garnish
 
+start\:production:
+	@node --harmony_destructuring bin/www | garnish
+
 watch:
 	@onchange 'db/**/*.yml' -- make db & \
 		nodemon -q -x 'bin/www | garnish'

@@ -21,7 +21,7 @@ start: install db
 	@bin/www | garnish
 
 start\:production:
-	@node --harmony_destructuring bin/www | garnish
+	@node --harmony_destructuring bin/www
 
 watch:
 	@onchange 'db/**/*.yml' -- make db & \

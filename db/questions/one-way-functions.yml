@@ -1,0 +1,15 @@
+---
+id: 1
+title: Can one-way functions exist?
+slug: one-way-functions
+category: 3
+config:
+  tasks: true
+  milestones: true
+description: |
+  One-way functions are fundamental tools for cryptography, personal identification, and other data security applications. While the existence of one-way functions in this sense is also an open conjecture, there are several candidates that have withstood decades of intense scrutiny.
+significance: |
+  Cryptography is built on the basis of one-way functions. Many modern applications are made of these principles—everything from securely storing passwords to ensuring you can access your bank's website without your browsing session being hijacked by someone else.
+prior_work: ""
+citation:
+  doi: "10.18258/3356"

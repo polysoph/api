@@ -1,0 +1,14 @@
+---
+id: 4
+title: What are the processes that cause a supernova?
+slug: supernova-origins
+category: 1
+config:
+  tasks: true
+  milestones: true
+description: |
+  The P vs. NP problem asks whether every problem whose solution can be quickly _verified_ by a computer can also be quickly _solved_ by a computer. First mentioned in a letter between Kurt Gödel to John von Neumann, Gödel asked whether a certain NP-complete problem could be solved in quadratic or linear time. The precise statement of the P versus NP problem was introduced in 1971 by Stephen Cook in his seminal paper "The complexity of theorem proving procedures."
+significance: |
+
+citation:
+  doi: "10.18258/3356"

@@ -2,18 +2,12 @@
 - id: 0
   title: Mathematics
   slug: mathematics
-  subCategories:
-    - id: 8
-      title: Combinatorics
 - id: 1
   title: Astronomy
   slug: astronomy
-  subCategories: []
 - id: 2
-  title: Astrophysics
-  slug: astrophysics
-  subCategories: []
+  title: Physics
+  slug: physics
 - id: 3
   title: Computer Science
   slug: computer-science
-  subCategories: []

@@ -1,11 +1,13 @@
 ---
 id: 1
-title: Can one-way functions exist?
+title: Do one-way functions exist?
 slug: one-way-functions
 category: 3
 config:
   tasks: true
   milestones: true
+summary: |
+  Are there functions where the input value cannot be derived from the output value?
 description: |
   One-way functions are fundamental tools for cryptography, personal identification, and other data security applications. While the existence of one-way functions in this sense is also an open conjecture, there are several candidates that have withstood decades of intense scrutiny.
 significance: |

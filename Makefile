@@ -23,6 +23,11 @@ start: install db
 start\:production:
 	@node --harmony_destructuring bin/www
 
+deploy:
+	@git add -f db.json
+	@git commit -m "Auto-commit: Updating database"
+	@git push dokku master
+
 watch:
 	@onchange 'db/**/*.yml' -- make db & \
 		nodemon -q -x 'bin/www | garnish'

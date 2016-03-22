@@ -5,6 +5,9 @@ slug: dhj-theorem
 category: 0
 config:
   tasks: false
+keywords:
+  - 0
+  - 1
 summary: Can we develop a proof for the [density Hales-Jewett theorem](https://en.wikipedia.org/wiki/Hales%E2%80%93Jewett_theorem) using only basic mathematical principles?
 description: |
   Discovered in 1975, the density Hales-Jewett theorem (DHJ) is a technique for estimating line-free configurations in multi-dimensional grids. Furstenberg and Katznelson 1991 paper laid out the first mathematical proof for the relationship. However, while their proof is sound, it relies on advanced techniques in the branch of mathematics called [ergodic theory](https://en.wikipedia.org/wiki/Ergodic_theory), which makes it difficult to follow.

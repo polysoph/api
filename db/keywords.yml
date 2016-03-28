@@ -5,3 +5,9 @@
 - id: 1
   title: Prime Numbers
   slug: prime-numbers
+- id: 2
+  title: Erdogic Theory
+  slug: erdogic-theory
+- id: 3
+  title: Functional Analysis
+  slug: functional-analysis

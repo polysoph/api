@@ -7,7 +7,7 @@ config:
   tasks: true
   milestones: true
 summary: |
-  If a problem's solution can be _verified_ quickly by a computer, can it also be _solved_ quickly?
+  If a problem's solution can be _verified_ quickly, can it also be _solved_ quickly?
 description: |
   The P vs. NP problem asks whether every problem whose solution can be quickly _verified_ by a computer can also be quickly _solved_ by a computer. First mentioned in a letter between Kurt Gödel to John von Neumann, Gödel asked whether a certain NP-complete problem could be solved in quadratic or linear time. The precise statement of the P versus NP problem was introduced in 1971 by Stephen Cook in his seminal paper "The complexity of theorem proving procedures."
 significance: |
@@ -15,3 +15,6 @@ significance: |
 prior_work: ""
 citation:
   doi: "10.18258/3356"
+metrics:
+  followers: 1498
+  citations: 18

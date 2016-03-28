@@ -128,3 +128,8 @@
   name: Michael Peake
   avatar:
     url: http://polysoph-assets.s3.amazonaws.com/peake.jpg
+- id: 19
+  handle: you
+  name: Your Name
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/rzurowski.png

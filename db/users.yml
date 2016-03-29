@@ -6,130 +6,130 @@
   institution: University of Cambridge
   location: Cambridge, UK
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/gowers.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/gowers.jpg
 - id: 1
   handle: ttao
   name: Terrence Tao
   institution: University of California, Los Angeles
   location: Los Angeles, CA
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/terrencetao.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/terrencetao.jpg
 - id: 2
   handle: jozsef
   name: Jozsef Solymosi
   institution: University of British Columbia
   location: Vancouver, Canada
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/jozsef.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/jozsef.jpg
 - id: 3
   handle: gil
   name: Gil Kalai
   institution: Yale University
   location: New Haven, Connecticut
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/gil.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/gil.jpg
 - id: 4
   handle: timaustin
   name: Tim Austin
   institution: NYU Courant Institute
   location: New York, USA
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/timaustin.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/timaustin.jpg
 - id: 5
   handle: jasondyer
   name: Jason Dyer
   location: Phoenix, Arizona
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/jasondyer.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/jasondyer.jpg
 - id: 6
   handle: ryanodonnell
   name: Ryan O'Donnell
   institution: Carnegie Mellon
   location: Pittsburgh, Pennsylvania
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/rodonnell.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/rodonnell.jpg
 - id: 7
   handle: celsholtz
   name: Christian Elsholtz
   location: Darmstadt, Germany
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/celsholtz.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/celsholtz.jpg
 - id: 8
   handle: boris
   name: Boris Bukh
   institution: Carnegie Mellon
   location: Pittsburgh, Pennsylvania
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/boris.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/boris.jpg
 - id: 9
   handle: wgasarch
   name: William Gasarch
   institution: University of Maryland
   location: New York, NY
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/wgasarch.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/wgasarch.jpg
 - id: 10
   handle: tneylon
   name: Tyler Neylon
   institution: New York University
   location: New York, NY
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/tneylon.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/tneylon.jpg
 - id: 11
   handle: sune
   name: Sune Kristian Jakobsen
   institution: University of Oxford
   location: Oxford, UK
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/sune.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/sune.jpg
 - id: 12
   handle: kevinobryant
   name: Kevin O'Bryant
   institution: CUNY
   location: New York, NY
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/kobryant.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/kobryant.jpg
 - id: 13
   handle: tyler
   name: Tyler Neylon
   institution: NYU
   location: New York, NY
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/tneylon.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/tneylon.jpg
 - id: 14
   handle: klas
   name: Klas Markstrom
   institution: Umeå University
   location: Umeå, Sweden
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/klas.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/klas.jpg
 - id: 15
   handle: nielsen
   name: Michael Nielsen
   location: Toronto, Canada
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/nielsen.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/nielsen.jpg
 - id: 16
   handle: jurgen
   name: Jürgen Bierbrauer
   institution: Michigan Technological University
   location: Houghton, Michigan
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/jurgen.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/jurgen.jpg
 - id: 17
   handle: yves
   name: Yves Edel
   institution: Ghent University
   location: Gent, Belgium
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/yves.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/yves.jpg
 - id: 18
   handle: peake
   name: Michael Peake
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/peake.jpg
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/peake.jpg
 - id: 19
   handle: you
   name: Your Name
   avatar:
-    url: http://polysoph-assets.s3.amazonaws.com/rzurowski.png
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/rzurowski.png

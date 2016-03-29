@@ -2,6 +2,7 @@
 id: 4
 title: What are the processes that cause a supernova?
 slug: supernova-origins
+status: open
 category: 1
 config:
   tasks: true

@@ -1,7 +1,8 @@
 ---
-id: 2
+id: 5
 title: P vs. NP
 slug: p-v-np
+status: open
 category: 3
 config:
   tasks: true
@@ -18,3 +19,17 @@ citation:
 metrics:
   followers: 1498
   citations: 18
+milestones:
+owners:
+  - user_id: 8
+discussions:
+  - id: 351
+    type: begin
+    title: Project Began
+    created_at: "2016-03-15T20:43:00.000Z"
+    contents: ""
+    owner_id: 8
+    comments: 0
+    views: 120
+actions:
+artifacts:

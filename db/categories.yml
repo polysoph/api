@@ -11,3 +11,6 @@
 - id: 3
   title: Computer Science
   slug: computer-science
+- id: 4
+  title: Biology
+  slug: biology

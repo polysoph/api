@@ -1,14 +1,14 @@
 ---
-id: 3
-title: What is the shape of the universe?
-slug: shape-of-the-universe
+id: 2
+title: Understanding Proteins through Machine Learning
+slug: protein-machine-learning
 status: open
-category: 1
+category: 4
 config:
   tasks: true
   milestones: true
 summary: |
-  How can we understand the way the universe has expanded?
+  How can we leverage AI computer systems to better understand how proteins interact with each other?
 description: |
   If the actual density of the universe is greater than the critical density, then it contains enough mass to eventually stop its expansion. In this case, the universe is closed and finite, though it has no end, and has a spherical shape. Once the universe stops expanding, it will begin to contract. Galaxies will stop receding and start moving closer and closer together. Eventually, the universe will undergo the opposite of the Big Bang, often called the "Big Crunch." This is known as a closed universe.
 significance: |

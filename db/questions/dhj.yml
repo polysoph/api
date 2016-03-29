@@ -1,8 +1,9 @@
 ---
 id: 0
-title: Is there a simpler proof for the density Hales-Jewett theorem?
+title: Simple Proof for the DHJ
 slug: dhj-theorem
 category: 0
+status: closed
 config:
   tasks: false
 keywords:
@@ -10,7 +11,7 @@ keywords:
   - 1
   - 2
   - 3
-summary: Can we develop a proof for the [DHJ](https://en.wikipedia.org/wiki/Hales%E2%80%93Jewett_theorem) using only basic mathematical principles?
+summary: Can we develop a proof for the [density Hales-Jewett](https://en.wikipedia.org/wiki/Hales%E2%80%93Jewett_theorem) theorem using only basic mathematical principles? How might this help us better understand the nature of prime numbers?
 description: |
   Discovered in 1975, the density Hales-Jewett theorem (DHJ) is a technique for estimating line-free configurations in multi-dimensional grids. Furstenberg and Katznelson 1991 paper laid out the first mathematical proof for the relationship. However, while their proof is sound, it relies on advanced techniques in the branch of mathematics called [ergodic theory](https://en.wikipedia.org/wiki/Ergodic_theory), which makes it difficult to follow.
 

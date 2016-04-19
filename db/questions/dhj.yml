@@ -1,11 +1,12 @@
 ---
 id: 0
-title: Simple Proof for the DHJ
+title: Finding a simple proof for the density Hales-Jewett theorem
 slug: dhj-theorem
 category: 0
 status: closed
 config:
   tasks: false
+  milestones: true
 keywords:
   - 0
   - 1
@@ -150,6 +151,21 @@ discussions:
       - id: 3
         type: comment
         ref: 403
+      - id: 4
+        type: comment
+        ref: 404
+      - id: 5
+        type: comment
+        ref: 405
+      - id: 6
+        type: comment
+        ref: 406
+      - id: 7
+        type: comment
+        ref: 407
+      - id: 8
+        type: action
+        ref: 9
     comments:
       - id: 401
         owner_id: 0
@@ -173,6 +189,47 @@ discussions:
           Now %T% is a large triangular subset of a triangular grid, and one can (if one really feels like it) shear it so that it becomes a right-angled triangle instead of an isosceles triangle. This way it's not hard to show that the assertion that every dense subset of %T% contains the vertices of an equilateral triangle of the form %(r+d,s,t)%, %(r,s+d,t)%, %(r,s,t+d)% is equivalent to the corners result.
 
           Unfortunately it’s not the case that dense subsets of %T% correspond to dense subsets of %[3]^n% (because almost every point in %[3]^n% has similar numbers of %1%s, %2%s and %3%s) but there are dodges for getting round that.
+      - id: 404
+        owner_id: 1
+        created_at: "2016-02-01T13:49:00.000Z"
+        contents: |
+          @gil made a blog post on this project, the %k=2% case of density Hales-Jewett is actually just [Sperner’s theorem](http://en.wikipedia.org/wiki/Sperner_family).
+
+          He made the point that, of course, this theorem already has a combinatorial proof, but this proof has a rather different flavour than usual triangle removal lemma (or its %k=2% counterpart, which is the trivial statement that if a subset of a set V of vertices is small, then it can be removed entirely by removing a small number of vertices.)
+
+          As pointed out to me by my student, Le Thai Hoang, another difference between DHJ and, say, the corners problem, is that one does not expect a positive density of all combinatorial lines to lie in the set. For instance, in the %k=2% case, and identifying %{}[2]^n% with the set of subsets of %{1,2,…,n}%, Hoang observed that the set of subsets of %{1,…,n}% of cardinality %n/2 + O( \sqrt{n} )% has positive density, but only about %(2+o(1))^n% of the %3^n% combinatorial lines here actually lie in the set. This seems to fit well with your observations that some weighting of the vertices etc. is needed.
+
+          At the ergodic theory level, there is also a distinction between the ergodic theory proofs of, say, the corners theorem, and of density Hales-Jewett, which may be an indication that something different happens at the combinatorial level too. Namely, in the ergodic proof of corners (or Roth, or Szemeredi, etc.) one has a single dynamical system (with the action of a single group G), and one works with that system (and its factors) throughout the proof. But for DHJ, one has a system of measurable sets indexed by words, and one repeatedly refines the set of words to much smaller subsets in order to obtain good “stationarity” properties. (My student, @timaustin, could explain this much better than I could.)
+
+          It is only once one has all this stationarity that the proof can really begin in earnest. This is also consistent with proofs of the colouring Hales-Jewett theorem, which also massively restrict the space of lines being considered, and with the above observation that we do not expect a positive density of the full space of lines to be contained in the set. So perhaps some preliminary “regularisation” of the problem is needed before doing anything triangle-removal-like.
+      - id: 405
+        owner_id: 0
+        created_at: "2016-02-01T13:49:00.000Z"
+        contents: |
+          @gil, if you're joining this on this project, I just want to make a quick remark about Fourier expansions and the %k=3% case. I got stuck several years ago when I was trying to develop a Fourier approach to a similar problem. Maybe with your deep knowledge of this kind of thing you can get me unstuck again. The problem was that the natural Fourier basis in
+
+          %\emptyset [3]^n% was the basis you get by thinking of %\emptyset [3]^n% as the group %\mathbb{Z}_3^n%. And if that’s what you do, then there appear to be examples that do not behave quasirandomly, but which do not have large Fourier coefficients either. For example, suppose that %n% is a multiple of 7, and you look at the set %A% of all sequences where the numbers of 1s, 2s and 3s are all multiples of 7\. If two such sequences lie in a combinatorial line, then the set of variable coordinates for that line must have cardinality that’s a multiple of 7, from which it follows that the third point automatically lies in the line. So this set %A% has too many combinatorial lines.
+
+          But I’m fairly sure — perhaps you can confirm this — that %A% has no large Fourier coefficient. You can use this idea to produce lots more examples. Obviously you can replace 7 by some other small number. But you can also pick some arbitrary subset %W% of %\emptyset[n]% and just ask that the numbers of 0s, 1s and 2s inside %W% are multiples of 7. If these observations are correct, then they suggest another interesting subproblem:
+
+          > Describe all obstructions to randomness. That is, find a nice explicit set %\mathcal{F}% of functions defined on %\emptyset [3]^n% such that (the characteristic function of) any set with the wrong number of combinatorial lines correlates with a function in %\mathcal{F}%.
+
+          Ideally, correlation with a function in %\mathcal{F}% would imply a density increase on some subset. Of course, this would be aiming for a Roth-type proof rather than a Ruzsa-Szemerédi-Solymosi-type proof.
+      - id: 406
+        owner_id: 3
+        created_at: "2016-02-01T15:49:00.000Z"
+        contents: |
+          Hi all. I'm currently focused on my own project, but I can definitely lurk around and provide some thoughts on a few of the approaches.
+      - id: 407
+        owner_id: 1
+        created_at: "2016-02-01T15:49:00.000Z"
+        contents: |
+          Glad you're joining us @gil.
+
+          I think it might be time to split this discussion up into several different ones. We've identified at least 3 approaches here (Triangle Removal in #401, Szémeredi in #404, and Fourier expansions in #405).
+
+          I've created discussions for each—lets continue these conversations there.
+
   - id: 1
     title: Triangle Removal
     slug: triangle-removal
@@ -209,7 +266,7 @@ discussions:
       - id: 9
         owner_id: 0
         created_at: "2016-02-02T06:36:00.000Z"
-        contents: "@ttao's comment about Le Thai Hoang’s observation (#4) seems to me to be an important one, so let me spell out why, even though it’s basically there in what Terry says. If you follow the triangle-removal proof of the corners result, you find that you can prove something stronger: in a set of density %\\delta% you don’t just get one corner, but you get %c(\\delta)n^2% corners. (The proof is that if there are very few corners then there are very few triangles in the associated tripartite graph, and then you can apply triangle removal just as before to get a contradiction.) If one is going to find an analogous proof here, it is essential that it should not try to prove a lemma that has false consequences. In our case, we must be careful that we don’t accidentally try to develop an approach that would also imply that a positive density of all possible combinatorial lines lie in the set.\n\nI haven’t checked, but I think that weighting the vertices as suggested in KK avoids this pitfall, because now the analogous set to the one used by Le Thai Hoang is concentrated around sets of size %n/3%. Probably this is exactly what Terry meant at the end of his second paragraph."
+        contents: "If you follow the triangle-removal proof of the corners result, you find that you can prove something stronger: in a set of density %\\delta% you don’t just get one corner, but you get %c(\\delta)n^2% corners. (The proof is that if there are very few corners then there are very few triangles in the associated tripartite graph, and then you can apply triangle removal just as before to get a contradiction.) If one is going to find an analogous proof here, it is essential that it should not try to prove a lemma that has false consequences. In our case, we must be careful that we don’t accidentally try to develop an approach that would also imply that a positive density of all possible combinatorial lines lie in the set.\n\nI haven’t checked, but I think that weighting the vertices as suggested in KK avoids this pitfall, because now the analogous set to the one used by Le Thai Hoang is concentrated around sets of size %n/3%. Probably this is exactly what Terry meant at the end of his second paragraph."
       - id: 74
         owner_id: 0
         created_at: "2016-02-03T20:26:00.000Z"
@@ -221,7 +278,7 @@ discussions:
       - id: 85
         owner_id: 1
         created_at: "2016-02-03T23:46:00.000Z"
-        contents: "@Sune #59: The lower bound %c_4 \\geq 49% you have compares pretty well with the upper bound %c_4 \\leq 3c_3 = 54%. It may be possible to shave the upper bound down a notch, by trying to figure out what the extremal subsets of %{}[3]^3% are that have 18 elements but no combinatorial lines. Any 54-element subset of %{}[3]^4% with no combinatorial lines must be extremal on every three-dimensional slice, which looks unlikely if there are few extremals."
+        contents: "The lower bound %c_4 \\geq 49% you have compares pretty well with the upper bound %c_4 \\leq 3c_3 = 54%. It may be possible to shave the upper bound down a notch, by trying to figure out what the extremal subsets of %{}[3]^3% are that have 18 elements but no combinatorial lines. Any 54-element subset of %{}[3]^4% with no combinatorial lines must be extremal on every three-dimensional slice, which looks unlikely if there are few extremals."
       - id: 95
         owner_id: 0
         created_at: "2016-02-04T04:18:00.000Z"
@@ -264,6 +321,9 @@ discussions:
       - id: 264
         type: comment
         ref: 64
+      - id: 265
+        type: action
+        ref: 11
     comments:
       - id: 13
         owner_id: 1
@@ -300,7 +360,14 @@ discussions:
       - id: 64
         owner_id: 6
         created_at: "2016-02-03T08:28:00.000Z"
-        contents: "On the topic of more analytic proofs of Sperner: I think I now see why Boris mentioned Kruskal-Katona in the same breath as Sperner. Let me try to sketch the connection I see. I’m sure it’s well known. Let %n% be odd for simplicity and write %B_j% for the set of strings in %\\{0,1\\}^n% with exactly %j% %1%‘s. Let %k = \\lfloor n/2 \\rfloor%. Let %A_j% denote %A \\cap B_j% and let %\\mu_j% denote %A_j%‘s density within %B_j%. One particular thing Sperner tells us is that if %\\mu_k + \\mu_{k+1} > 1% then %A% contains a “combinatorial line” (because the overall density of %A% is at least that of %B_{k}%‘s density within %\\{0,1\\}^n%). I.e., there is %x \\in A_k, y \\in A_{k+1}% such that %x \\prec y%. Here is a way to see that with Kruskal-Katona: K-K implies that the upper-shadow %\\partial^+ A_k% of %A_k% has density at least %\\mu_k% within %B_{k+1}%. Now together %\\partial^+ A_k% and %A_{k+1}% have density exceeding %1% within %B_{k+1}%, hence they overlap. — Indeed, I think you can get most of Sperner out of extending this argument. Let me be uncareful. Suppose that %A%‘s overall density exceeds that of %B_{k+1}% within %\\{0,1\\}^n%. As an example, perhaps %A% has %40\\%% of the strings in %B_{k}%, %40\\%% of the strings in %B_{k+5}% and %40\\%% of the strings in %B_{k+7}%. Now K-K implies that %A_{k}%‘s upper shadow is also at least %40\\%% of %B_{k+1}%. And the upper shaddow of that is at least %40\\%% (basically) of %B_{k+2}%. Etc. When you get up to %B_{k+5}%, you either get a collision and are done, or you have at least %80\\%% of %B_{k+5}%. Then you get at least %80\\%% of %B_{k+6}%, and then you have %120\\%% of %B_{k+7}% and you get a collision and are done. — The reason I kind of like this proof is that there is an “analytic” proof of Kruskal-Katona that seems amenable to “robustification”. Although to be honest, I can’t quite remember how we got talking about this subject just now…"
+        contents: |
+          On the topic of more analytic proofs of Sperner: I think I now see why Boris mentioned Kruskal-Katona in the same breath as Sperner.
+
+          Let %n% be odd for simplicity and write %B_j% for the set of strings in %\\{0,1\\}^n% with exactly %j% %1%‘s. Let %k = \\lfloor n/2 \\rfloor%. Let %A_j% denote %A \\cap B_j% and let %\\mu_j% denote %A_j%‘s density within %B_j%. One particular thing Sperner tells us is that if %\\mu_k + \\mu_{k+1} > 1% then %A% contains a “combinatorial line” (because the overall density of %A% is at least that of %B_{k}%‘s density within %\\{0,1\\}^n%). Here is a way to see that with Kruskal-Katona: K-K implies that the upper-shadow %\\partial^+ A_k% of %A_k% has density at least %\\mu_k% within %B_{k+1}%.
+
+          Now together %\\partial^+ A_k% and %A_{k+1}% have density exceeding %1% within %B_{k+1}%, hence they overlap. — Indeed, I think you can get most of Sperner out of extending this argument. Suppose that %A%‘s overall density exceeds that of %B_{k+1}% within %\\{0,1\\}^n%. As an example, perhaps %A% has %40\\%% of the strings in %B_{k}%, %40\\%% of the strings in %B_{k+5}% and %40\\%% of the strings in %B_{k+7}%. Now K-K implies that %A_{k}%‘s upper shadow is also at least %40\\%% of %B_{k+1}%. And the upper shaddow of that is at least %40\\%% (basically) of %B_{k+2}%. Etc. When you get up to %B_{k+5}%, you either get a collision and are done, or you have at least %80\\%% of %B_{k+5}%. Then you get at least %80\\%% of %B_{k+6}%, and then you have %120\\%% of %B_{k+7}% and you get a collision and are done.
+
+          The reason I kind of like this proof is that there is an “analytic” proof of Kruskal-Katona that seems amenable to “robustification”. Although to be honest, I can’t quite remember how we got talking about this subject just now…
   - id: 3
     title: A Hyper Optimistic Conjecture
     slug: a-hyper-optimistic-conjecture
@@ -411,11 +478,19 @@ discussions:
       - id: 3211
         type: comment
         ref: 452
+      - id: 3212
+        type: action
+        ref: 10
     comments:
       - id: 452
-        owner_id: 3
-        created_at: '2016-02-05T12:24:00.000Z'
-        contents: Wassup
+        owner_id: 1
+        created_at: '2016-01-05T12:24:00.000Z'
+        contents: |
+          Continuing from [the earlier discussion](/question/dhj-theorem/discussions/0#comment-404) about Szemeredi’s approach, it's worth noting that Endre also has a simple combinatorial proof of Roth’s theorem (which avoids Fourier analysis or the regularity lemma), instead relying on the Szemeredi cube lemma. This can for instance be found in Graham-Rothschild-Spencer’s book, or Chapter 10.7 of my book with Van, [or in Ernie’s writeup](http://www.math.gatech.edu/~ecroot/szemeredi.pdf).
+
+          The basic idea is to observe that if a set A in %\emptyset [N]% is dense, then it must contain a high-dimensional cube Q. If A has no arithmetic progressions, then %Q – A% must be essentially disjoint from A. Expressing the d-dimensional cube %Q% as the final element of a sequence %Q_0 \subset Q_1 \subset \ldots \subset Q_d%, where each %Q_i% is one dimension larger than the preceding %Q_{i-1}%, and using the pigeonhole principle, we can find i such that %2 \cdot Q_i - A% has roughly the same size as %2 \cdot Q_{i+1} - A%. We can write %Q_{i+1} = Q_i + \{0,v_i\}% for some step %v_i%, and we thus see that %2 \cdot Q_i - A% is very stable under shifting by %v_i%, and thus both it and its complement can be partitioned into long arithmetic progressions of step %v_i%. Since A is disjoint from %2 \cdot Q_i - A%, it is squeezed into the other progressions, and on one of these we have a density increment.
+
+          Now apply the usual density increment argument and we are done. It’s not clear whether this argument can be adapted to give the corners theorem, let alone the %k=3% case of DHJ, but perhaps it should be looked at.
   - id: 5
     title: Obstructions to Uniformity
     slug: obstructions-to-uniformity
@@ -429,15 +504,59 @@ discussions:
       - id: 4525
         type: comment
         ref: 454
+      - id: 4526
+        type: comment
+        ref: 455
+      - id: 4527
+        type: comment
+        ref: 456
     comments:
       - id: 453
         owner_id: 0
         created_at: '2016-02-20T05:00:00.000Z'
-        contents: Yoyoyo
+        contents: |
+          What does it mean to “understand what a quasirandom subset of %\emptyset [3]^n% is like?
+
+          Here’s an attempt to explain. We are looking for a _definition_ of quasirandomness. My experience with other problems suggests that this definition should have the following property:
+
+          > If %A% is a dense quasirandom subset of %\emptyset [3]^n% and %B% is an arbitrary dense subset of %\emptyset [3]^n%, then there is a combinatorial line %(x,y,z)% with %x\in A%, %y\in B% and %z\in B%.
+
+          Indeed, one should have not just _one_ such combinatorial line but a _dense set_ of such combinatorial lines. (Here is a place where having a [Varnavides-type statement](/question/dhj-theorem/discussions/2) is actually a big help and not just a mere reassurance.)
+
+          Experience with other problems also suggests that if %A% does _not_ have this property then there will be some simple reason for it. An example of such a reason is that %x_1% might be 1 for every %x\in A%. (This would fail to have the property in (ii) because we could take %B% to be the set of all sequences with %x_1=2%.) If one can think of all possible “simple reasons,” then it is often possible to pass to substructures or partitions of the ground set and obtain density or energy increases.
+
+          (If you don’t know what this means, it’s not too important at this stage. The main point is that if you can do then there are standard techniques for using what you’ve done. In many other contexts, once you’ve got this the problem is basically solved.)
       - id: 454
         owner_id: 1
         created_at: '2016-02-20T05:00:00.000Z'
-        contents: Yoyoyo
+        contents: |
+          Similar definitions apply if we restrict to a triple of slices or a triangular grid of slices.
+
+          **Obstruction 1**. In any combinatorial line, a coordinate must either take all three values or just one. Therefore, a set %A% is not uniform unless the number of sequences %x% in %A% such that %x_i=j% is roughly %|A|/3% for every %i\in[n]% and %j\in\{1,2,3\}%. To prove this seems to be not quite trivial. An obvious set %B% to consider is to take %j% such that the number of points with %x_i=j% is significantly less than %|A|/3% and let %B% be the set of all sequences %x% such that %x_i=j%. Then the only points in %A% that can make lines with %B% are ones with %x_i=j%. Therefore, if we get the right number of combinatorial lines in %A\times B^2%, then we can drop to the subset %A''% that consists of those points only and we find that we get more combinatorial lines than we would expect (given the densities of the restrictions of %A% and %B% to %x_i=j%). I think one can mess around with this information and obtain a set %B% that proves that %A% is not uniform.
+
+          Given that that was slightly tricky, I’ll restrict attention for now to what I might call _strong_ obstructions to uniformity. I’ll call a set %A% _strongly non-uniform_ if I can find a dense set %B% such that there are _no_ combinatorial lines %(x,y,z)% with %x\in A%, %y\in B% and %z\in B%. So finding more strong obstructions really is a genuinely elementary problem (in the sense of not needing special knowledge).
+      - id: 455
+        owner_id: 0
+        created_at: '2016-02-21T07:00:00.000Z'
+        contents: |
+          **Strong obstruction 1**. If there exist %i% and %j% such that %x_i=j% for every %x% in %A%, then %A% is strongly non-uniform.
+          **Proof**: let %k\ne j% and let %B% be the set of all sequences such that %x_i=k%. You can’t have a combinatorial line in which the %i%th coordinate is %j% once and %k% twice.
+
+          **Strong obstruction 2**. If there is a positive integer %m% such that for every %x\in A% the number of 1s, 2s and 3s in %A% is always the same mod %m%, then %A% is strongly non-uniform.
+          **Proof**: If %y% and %z% belong to a combinatorial line and have the same number of 1s, 2s and 3s mod %m%, then the size of the variable set must be a multiple of %m%. Therefore, we can choose %B% to be a set where the sequences again have fixed numbers of 1s, 2s and 3s mod %m%, but different numbers from those of %A%.
+
+          **Strong obstruction 3**. This generalizes the previous example. Suppose that for every %x\in A% we know that the number of 1s belongs to a set %E_1% of residues mod %m%, the number of 2s belongs to a set %E_2%, and the number of 3s belongs to a set %E_3%. Now let %F_1,F_2,F_3% be sets of residues mod %m%, and let %B% be the set of all sequences with the number of 1s in %F_1% etc.
+
+          **Strong obstruction 4**. One can generalize further by passing to a subset. That is, instead of looking at the numbers of 1s, 2s and 3s in the whole sequence, one just looks at the numbers of 1s, 2s and 3s in some specified set %X% of coordinates. The proof is more or less the same. I haven’t tried hugely hard to find more obstructions.
+
+          Does anyone know of any? Does @boris's comment from before have any implications here?
+      - id: 456
+        owner_id: 8
+        created_at: '2016-02-21T07:43:00.000Z'
+        contents: |
+          @ttao, for your definition of triangular grid in #454, to make sure I understood it properly, should it say %a+b+c\leq n-m% instead of %a,b,c\leq n-m%?
+
+          @gowers, for the obstructions to the uniformity mentioned in #455, doesn’t it follow from that [discussion about Varnavides](/question/dhj-theorem/discussions/2) that to talk about pseudorandom sets we want our sets to be dense subsets in a suitable union of %\Gamma_{a,b,c}% that live near the middle of the lattice?
   - id: 6
     title: Lower Bounds
     slug: lower-bounds
@@ -507,7 +626,7 @@ discussions:
         owner_id: 1
         created_at: "2016-02-16T08:09:00.000Z"
         contents: |
-          Okay. I've set up a collaborative spreadsheet to track the current data we have for %c_n, c'_n, c''_n%. Should be editable to anyone whose already contributed. Let me know if you don't have access but want it. It should automatically propagate the bounds (1), (2) to any new bound entered. One should presumably be able to program the computations in 219 into here too. Please feel free to contribute to it.",
+          Okay. I've set up a collaborative spreadsheet to track the current data we have for %c_n%. Should be editable to anyone whose already contributed. Let me know if you don't have access but want it. It should automatically propagate to any new bound entered. One should presumably be able to program the computations in 219 into here too. Please feel free to contribute to it.",
       - id: 1051
         owner_id: 15
         created_at: "2016-02-16T13:47:00.000Z"
@@ -575,6 +694,19 @@ actions:
     type: unresolve
     created_at: "2016-02-20T05:00:00.000Z"
     actor_id: 5
+  - id: 9
+    type: resolve
+    created_at: "2016-02-17T05:00:00.000Z"
+    actor_id: 1
+  - id: 10
+    type: reference
+    created_at: "2016-02-20T05:00:00.000Z"
+    actor_id: 1
+    artifact_id: 458
+  - id: 11
+    type: resolve
+    created_at: "2016-02-17T05:00:00.000Z"
+    actor_id: 6
 
 artifacts:
   - id: 456
@@ -615,3 +747,11 @@ artifacts:
     last_updated_at: "2016-02-11T14:35:00.000Z"
     source:
       url: "https://docs.google.com/spreadsheets/d/1q1_vEcLArwRk_31azk7w4FNbm1cqnbRgW3m7S9NM2tc/edit"
+  - id: 458
+    reference: linked
+    type: article
+    title: "Szemeredi’s Theorem on Three Term Progressions, at a Glance"
+    owner_id: 0
+    last_updated_at: "2016-02-11T14:35:00.000Z"
+    source:
+      url: "http://www.math.gatech.edu/~ecroot/szemeredi.pdf"

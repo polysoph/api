@@ -133,3 +133,10 @@
   name: Your Name
   avatar:
     url: http://polysoph-assets.s3.amazonaws.com/profiles/rzurowski.png
+- id: 20
+  handle: uribe
+  name: Daniel Uribe
+  institution: National University of Columbia
+  location: Bogotá, Columbia
+  avatar:
+    url: http://polysoph-assets.s3.amazonaws.com/profiles/uribe.jpg

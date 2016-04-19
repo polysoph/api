@@ -1,18 +1,37 @@
 ---
 id: 5
-title: P vs. NP
+title: Proof for P = NP
 slug: p-v-np
 status: open
 category: 3
 config:
-  tasks: true
-  milestones: true
+  tasks: false
+  milestones: false
+keywords:
+  - 4
+  - 6
+  - 5
 summary: |
-  If a problem's solution can be _verified_ quickly, can it also be _solved_ quickly?
+  If a problem's solution can be quickly _verified_ by a computer, can it also be _solved_ quickly?
 description: |
-  The P vs. NP problem asks whether every problem whose solution can be quickly _verified_ by a computer can also be quickly _solved_ by a computer. First mentioned in a letter between Kurt Gödel to John von Neumann, Gödel asked whether a certain NP-complete problem could be solved in quadratic or linear time. The precise statement of the P versus NP problem was introduced in 1971 by Stephen Cook in his seminal paper "The complexity of theorem proving procedures."
-significance: |
-  Many of the problems we know to be in NP or NP-complete are problems that we actually want to solve, problems that arise, say, in circuit design or in other industrial design applications. Furthermore, since the diverse NP-complete problems are all polynomial time related to one another, if we should ever learn a feasible means of solving any of them, we would have feasible means for all of them. The result of this would be extraordinary, something like a second industrial revolution. It would be as though we suddenly had a huge permanent increase in computational power, allowing us to solve an enormous array of practical problems heretofore out of our computational reach. The P vs. NP question is important in part because of this tantalizing possibility.
+
+  In computer science, algorithms can be broken into two categories of complexity: polynomial algorithms (P), whose efficiency can be modeled , and non-deterministic polynomial functions (NP), whose efficiency can't be modeled. P problems are easily solved by computers, and NP problems are not easily solvable, but if you present a potential solution it’s easy to verify whether it’s correct or not.
+
+  All P problems are NP problems. That is, if it’s easy for the computer to solve, it’s easy to verify the solution. The P vs NP problem is a long-standing problem in computer science that asks if these two problem types are the same, or if they are different, i.e. that there are some problems that are easily verified but not easily solved.
+
+  ### Goal
+
+  This project (rather ambitiously) hopes to distill [a non-constructive proof](https://en.wikipedia.org/wiki/Constructive_proof) which shows that %P = NP%.
+
+  ### Significance
+
+  The development of a reliable %P = NP% proof would have huge consequences for computer science techniques. The methods involved with showing %P = NP% would lead to very efficient ways of solving %NP% problems, which rely heavily on trial-and-error solutions. Often times, algorithms will test millions or billions of answers before finding a match. Discovering a %P = NP% proof would effectively short-circuit this process.
+
+  Important algorithms involving this level of trial-and-error include everything from route-finding in mapping services, to decrypting secure cyphers, to predicting protein structures. Many pieces of software work around the inefficiencies of %NP%-complete problems, but providing quick ways of solving these problems could lead to a whole new era of development in the computer sciences.
+
+  ### About the Problem
+
+  First mentioned in a letter between Kurt Gödel to John von Neumann, Gödel asked whether a certain %NP%-complete problem could be solved in quadratic or linear time. The precise statement of the P versus NP problem was introduced in 1971 by Stephen Cook in his seminal paper "The complexity of theorem proving procedures."
 prior_work: ""
 citation:
   doi: "10.18258/3356"
@@ -20,16 +39,32 @@ metrics:
   followers: 1498
   citations: 18
 milestones:
-owners:
-  - user_id: 8
-discussions:
-  - id: 351
+  - id: 0
     type: begin
     title: Project Began
-    created_at: "2016-03-15T20:43:00.000Z"
+    created_at: "2016-02-01T23:43:00.000Z"
     contents: ""
     owner_id: 8
     comments: 0
-    views: 120
+    views: 1300
+owners:
+  - user_id: 20
+discussions:
+  - id: 33
+    title: Starting Out
+    slug: starting-out
+    status: open
+    created_at: "2016-04-15T20:43:00.000Z"
+    created_by: 20
+    timeline:
+      - id: 1
+        type: comment
+        ref: 533
+    comments:
+      - id: 533
+        owner_id: 20
+        created_at: "2016-02-01T13:43:00.000Z"
+        contents: |
+          Hi all!
 actions:
 artifacts:
